@@ -17,6 +17,9 @@
             right: 20px;
             padding: 10px;
             cursor: pointer;
+            background-color: #333;
+            border-radius: 8px;
+            border: 4px solid yellow;
         }
         .container {
             max-width: 100%;
@@ -66,12 +69,69 @@
         .dark .button-primary:hover {
             background-color: #2a4365; /* Primary button hover color for dark mode */
         }
+        
+        #languageSelect {
+            background-color: white;
+            border: 2px solid #666;
+            border-radius: 4px;
+            display: inline-block;
+            font: inherit;
+            line-height: 1.5em;
+            padding: 0.5em 3.5em 0.5em 1em;
+            
+            /* reset */
+            
+            margin: 0;      
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        
+        /* arrows */
+        
+        #languageSelect {
+          background-image:
+            linear-gradient(45deg, transparent 50%, blue 50%),
+            linear-gradient(135deg, blue 50%, transparent 50%),
+            linear-gradient(to right, skyblue, skyblue);
+          background-position:
+            calc(100% - 20px) calc(1em + 2px),
+            calc(100% - 15px) calc(1em + 2px),
+            100% 0;
+          background-size:
+            5px 5px,
+            5px 5px,
+            2.5em 2.5em;
+          background-repeat: no-repeat;
+        }
+        
+        #languageSelect:focus {
+          background-image:
+            linear-gradient(45deg, white 50%, transparent 50%),
+            linear-gradient(135deg, transparent 50%, white 50%),
+            linear-gradient(to right, gray, gray);
+          background-position:
+            calc(100% - 15px) 1em,
+            calc(100% - 20px) 1em,
+            100% 0;
+          background-size:
+            5px 5px,
+            5px 5px,
+            2.5em 2.5em;
+          background-repeat: no-repeat;
+        }
+        
+       .dark #languageSelect {
+            color: #000;
+        }
+        
         .guest-book {
             background-color: #fff; /* Background color for light mode */
             padding: 40px; /* Padding for guest book */
             border-radius: 8px; /* Rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-            max-width: 80%; /* Max width */
             margin: 0 auto; /* Center horizontally */
         }
         .dark .guest-book {
@@ -86,13 +146,14 @@
             border-bottom-color: rgba(59, 130, 246, 0.5); /* Dark mode border color */
         }
         .signature:last-child {
-            border-bottom: none; /* Remove border from the last signature */
+            border-bottom: inherit; /* Remove border from the last signature */
         }
         .signature .full_name {
             font-family: 'Gwendolyn', cursive; /* Handwriting font for full name */
-            font-size: 1.75rem; /* Larger font size for full name */
+            font-size: 2.5rem; /* Larger font size for full name */
             color: #1e3a8a; /* Color for full name */
-            line-height: 1.5rem; /* Line height */
+            line-height: 2rem; /* Line height */
+            margin-top: 2rem;
         }
         .dark .signature .full_name {
             color: #a5b4fc; /* Light color for full name in dark mode */
@@ -100,15 +161,24 @@
         .signature .role, .signature .company, .signature .timestamp, .signature .location {
             color: #333333; /* Dark color for role and company */
             display: block; /* Block to separate lines */
-            font-size: 1rem; /* Font size */
+            margin: 0  0 0 1.5rem;
+            padding: 0;
         }
+        
+        .signature .role, .signature .company {
+            display: inline;
+        }
+        
+        .signature .company {
+            margin-left: .5rem;
+        }
+        
         .dark .signature .role, .dark .signature .company, .dark .signature .timestamp, .dark .signature .location {
             color: #cbd5e0; /* Light color for role and company in dark mode */
         }
         .form-input {
             width: calc(100% - 2rem); /* Reduce width */
             margin: 0 auto; /* Center input */
-            max-width: 400px; /* Max width for better desktop view */
             padding: 10px; /* More padding for better readability */
             font-size: 1rem; /* Increase font size */
             border: 2px solid #333333; /* Ensure visible border */
@@ -264,21 +334,21 @@
                 </div>
             </section>
 
-            <section class="section-spacing sign-module mt-10 form-container">
+            <section class="section-spacing sign-module border form-container">
                 <h2 class="text-3xl font-bold text-primary mb-6" id="signPledgeHeading">Sign the pledge</h2>
                 <form id="signForm" action="sign.php" method="post" class="space-y-4" aria-labelledby="signFormTitle">
                     <label id="signFormTitle" class="sr-only">Sign the pledge form</label>
                     <label for="fullNameInput" class="block text-primary" id="fullNameLabel">Full name</label>
-                    <input type="text" id="fullNameInput" name="full_name" placeholder="Enter your full name" required class="w-full p-3 border border-gray-300 rounded form-input" aria-required="true"/>
+                    <input type="text" id="fullNameInput" name="full_name" placeholder="Enter your full name" required class="w-full p-3 border border-gray-800 rounded form-input" aria-required="true"/>
                     
                     <label for="emailInput" class="block text-primary" id="emailLabel">Email address</label>
-                    <input type="email" id="emailInput" name="email" placeholder="Enter your email address" required class="w-full p-3 border border-gray-300 rounded form-input" aria-required="true"/>
+                    <input type="email" id="emailInput" name="email" placeholder="Enter your email address" required class="w-full p-3 border border-gray-800 rounded form-input" aria-required="true"/>
                     
                     <label for="roleInput" class="block text-primary" id="roleLabel">Role</label>
-                    <input type="text" id="roleInput" name="role" placeholder="Enter your role" required class="w-full p-3 border border-gray-300 rounded form-input" aria-required="true"/>
+                    <input type="text" id="roleInput" name="role" placeholder="Enter your role" required class="w-full p-3 border border-gray-800 rounded form-input" aria-required="true"/>
                     
                     <label for="companyInput" class="block text-primary" id="companyLabel">Company (optional)</label>
-                    <input type="text" id="companyInput" name="company" placeholder="Enter your company (optional)" class="w-full p-3 border border-gray-300 rounded form-input"/>
+                    <input type="text" id="companyInput" name="company" placeholder="Enter your company (optional)" class="w-full p-3 border border-gray-800 rounded form-input"/>
 
                     <input type="hidden" id="cityInput" name="city"/>
                     <input type="hidden" id="countryInput" name="country"/>
@@ -286,7 +356,7 @@
                     <!-- Honeypot field -->
                     <input type="text" name="honeypot" class="honeypot" aria-hidden="true" aria-label="If you are human, leave this field blank" autocomplete="off" tabindex="-1"/>
                     
-                    <button type="submit" class="button-primary w-full p-3 rounded hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-blue-300" aria-label="Sign the pledge">Sign</button>
+                    <button type="submit" class="button-primary w-full p-3 rounded hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-blue-300" aria-label="Sign the pledge">Sign the pledge</button>
                 </form>
                 <div class="signatures mt-10 guest-book">
                     <!-- Appreciation Message -->
@@ -299,7 +369,7 @@
                             $signatures = json_decode(file_get_contents('signatures.json'), true);
                             foreach ($signatures as $signature) {
                                 $timestamp = date('F j, Y, g:i a', $signature['timestamp']);
-                                echo "<div class='signature'><span class='timestamp'>$timestamp</span><br/><span class='role'>{$signature['role']}</span>, <span class='company'>{$signature['company']}</span><br/><span class='location'>{$signature['city']}, {$signature['country']}</span><br/><span class='full_name'>- {$signature['full_name']}</span></div>";
+                                echo "<div class='signature'><span class='timestamp'>$timestamp</span><span class='role'>{$signature['role']}</span><span class='company'>{$signature['company']}</span><span class='location'>{$signature['city']}, {$signature['country']}</span><span class='full_name'>- {$signature['full_name']}</span></div>";
                             }
                         }
                     ?>
