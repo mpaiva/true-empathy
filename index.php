@@ -293,7 +293,7 @@
             </p>
         </header>
 
-        <div class="language-selector text-center mb-6">
+        <div class="language-selector text-center mb-6" role="region" aria-label="Translations">
             <label for="languageSelect">Choose Language:</label>
             <select id="languageSelect" onchange="changeLanguage(this.value)">
                 <option value="en">English</option>
@@ -310,7 +310,7 @@
         </div>
         
         <main>
-            <section class="section-spacing">
+            <section class="section-spacing" aria-label="Principles">
                 <h2 class="text-3xl font-bold text-primary mb-4" id="principlesHeading">It's a matter of principles</h2>
                 <p class="text-lg text-secondary mb-8 visual-cue" id="principlesText">Join us in upholding these guiding principles to create a more inclusive and empathetic tech industry.</p>
                 
@@ -334,9 +334,9 @@
                 </div>
             </section>
 
-            <section class="section-spacing sign-module border form-container">
+            <section class="section-spacing sign-module border form-container" aria-label="Sign the pledge">
                 <h2 class="text-3xl font-bold text-primary mb-6" id="signPledgeHeading">Sign the pledge</h2>
-                <form id="signForm" action="sign.php" method="post" class="space-y-4" aria-labelledby="signFormTitle">
+                <form id="signForm" action="sign.php" method="post" class="space-y-4" aria-label="Pledge Form">
                     <label id="signFormTitle" class="sr-only">Sign the pledge form</label>
                     <label for="fullNameInput" class="block text-primary" id="fullNameLabel">Full name</label>
                     <input type="text" id="fullNameInput" name="full_name" placeholder="Enter your full name" required class="w-full p-3 border border-gray-800 rounded form-input" aria-required="true"/>
@@ -358,7 +358,7 @@
                     
                     <button type="submit" class="button-primary w-full p-3 rounded hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-blue-300" aria-label="Sign the pledge">Sign the pledge</button>
                 </form>
-                <div class="signatures mt-10 guest-book">
+                <div class="signatures mt-10 guest-book" role="region" aria-label="Signing Sheet">
                     <!-- Appreciation Message -->
                     <h2 class="text-2xl font-semibold mb-4 text-primary" id="thankYouHeading">Thank you for your support!</h2>
                     <p class="text-secondary mb-6" id="thankYouText">We appreciate your commitment to building a more accessible and inclusive tech industry. Together, we are making a difference!</p>
@@ -377,10 +377,9 @@
                 </div>
             </section>
 
-            <section class="merchandise-section mt-0">
+            <section class="merchandise-section mt-0" aria-label="Merchandise">
                 <h2 class="text-3xl font-bold mb-4 text-primary" id="supportHeading">Support our cause</h2>
                 <p class="text-lg text-secondary mb-8" id="supportText">All proceeds from the sales of these t-shirts will go to compensate people with disabilities participating in user research studies. Your purchase makes a difference!</p>
-            </section>
 
             <section class="section-spacing tshirt-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="tshirt bg-indigo-900 text-white p-6 rounded-lg shadow-md">
@@ -408,6 +407,7 @@
             <div class="footer mt-16 text-secondary">
                 <p>Together, we can build a more accessible, equitable, and truly empathetic world.</p>
             </div>
+                        </section>
         </main>
         
         <footer class="footer-links">
