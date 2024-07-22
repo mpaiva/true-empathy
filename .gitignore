@@ -8,6 +8,7 @@
 *.bs
 node_modules/
 build/
+signatures.json
 
 
 # Devel::Cover

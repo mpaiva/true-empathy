@@ -30,6 +30,10 @@
     margin: 2rem 0;
   }
 
+  #signForm input {
+    color: #333333;
+  }
+
   .merchandise-section {
     display: none;
     /* Space between merchandise section and footer */
@@ -521,19 +525,19 @@
           <label id="signFormTitle" class="sr-only">Sign the pledge form</label>
           <label for="fullNameInput" class="block text-primary" id="fullNameLabel">Full name</label>
           <input type="text" id="fullNameInput" name="full_name" placeholder="Enter your full name" required
-            class="w-full p-3 border border-gray-800 rounded form-input" aria-required="true" />
+            class="w-full p-3 border border-gray-800 rounded" aria-required="true" />
 
           <label for="emailInput" class="block text-primary" id="emailLabel">Email address</label>
           <input type="email" id="emailInput" name="email" placeholder="Enter your email address" required
-            class="w-full p-3 border border-gray-800 rounded form-input" aria-required="true" />
+            class="w-full p-3 border border-gray-800 rounded" aria-required="true" />
 
           <label for="roleInput" class="block text-primary" id="roleLabel">Role</label>
           <input type="text" id="roleInput" name="role" placeholder="Enter your role" required
-            class="w-full p-3 border border-gray-800 rounded form-input" aria-required="true" />
+            class="w-full p-3 border border-gray-800 rounded" aria-required="true" />
 
           <label for="companyInput" class="block text-primary" id="companyLabel">Company (optional)</label>
           <input type="text" id="companyInput" name="company" placeholder="Enter your company (optional)"
-            class="w-full p-3 border border-gray-800 rounded form-input" />
+            class="w-full p-3 border border-gray-800 rounded" />
 
           <input type="hidden" id="cityInput" name="city" />
           <input type="hidden" id="countryInput" name="country" />
