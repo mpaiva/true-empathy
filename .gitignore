@@ -6,6 +6,9 @@
 *.o
 *.pm.tdy
 *.bs
+node_modules/
+build/
+
 
 # Devel::Cover
 cover_db/
@@ -33,3 +36,4 @@ inc/
 /MANIFEST.bak
 /pm_to_blib
 /*.zip
+
