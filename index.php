@@ -16,8 +16,12 @@
     /* Base body text size */
   }
 
-  header {
-    margin-top: 4rem;
+  header,
+  main,
+  footer {
+    margin: 4rem auto;
+    max-width: 600px;
+
     /* Space between header and main content */
   }
 
@@ -145,7 +149,7 @@
     background-image:
       linear-gradient(45deg, transparent 50%, blue 50%),
       linear-gradient(135deg, blue 50%, transparent 50%),
-      linear-gradient(to right, skyblue, skyblue);
+      linear-gradient(to right, #ffaaff, #ffaaff);
     background-position:
       calc(100% - 20px) calc(1em + 2px),
       calc(100% - 15px) calc(1em + 2px),
@@ -198,7 +202,7 @@
   .signature {
     padding: 20px 10px 0px 10px;
     /* Padding for each signature */
-    border-bottom: 4px dotted #3b82f6;
+    border-bottom: 4px dotted #ffaaff;
     /* Light blue bottom border for signatures */
     margin-bottom: 10px;
     /* Space between signatures */
@@ -221,7 +225,7 @@
     /* Larger font size for full name */
     color: #1e3a8a;
     /* Color for full name */
-    line-height: 2rem;
+    line-height: auto;
     /* Line height */
     margin-top: 2rem;
   }
@@ -239,7 +243,7 @@
     /* Dark color for role and company */
     display: block;
     /* Block to separate lines */
-    margin: 0 0 0 1.5rem;
+    margin: 0;
     padding: 0;
   }
 
@@ -249,7 +253,7 @@
   }
 
   .signature .company {
-    margin-left: .5rem;
+    margin-left: 0;
   }
 
   .dark .signature .role,
@@ -303,7 +307,7 @@
   }
 
   .visual-cue {
-    border-left: 4px solid #0056b3;
+    border-left: 4px solid #ffaaff;
     /* Blue visual cue */
     padding-left: 1rem;
     max-width: 80ch;
@@ -457,9 +461,9 @@
 <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
   <div class="container mx-auto p-6 rounded-lg shadow-lg">
     <header class="text-center mb-10">
-      <h1 class="text-4xl font-bold text-primary" id="pageTitle">The True Empathy Pledge</h1>
+      <h1 class="text-8xl mb-20 font-bold text-primary" id="pageTitle">The True Empathy Pledge</h1>
       <p class="text-lg text-secondary mt-4 visual-cue" id="commitmentText">
-        I commit to fostering an inclusive tech industry by adhering to the following principles:
+        Join the community committed to fostering an inclusive tech industry by adhering four simple principles.
       </p>
     </header>
 
@@ -481,7 +485,7 @@
 
     <main>
       <section class="section-spacing" aria-label="Principles">
-        <h2 class="text-3xl font-bold text-primary mb-4" id="principlesHeading">It's a matter of principles</h2>
+        <h2 class="text-4xl font-bold text-primary mb-4" id="principlesHeading">It's a matter of principles</h2>
         <p class="text-lg text-secondary mb-8 visual-cue" id="principlesText">Join us in upholding these guiding
           principles to create a more inclusive and empathetic tech industry.</p>
 
@@ -510,7 +514,9 @@
       </section>
 
       <section class="section-spacing form-container" aria-label="Sign the pledge">
-        <h2 class="text-3xl font-bold text-primary" id="signPledgeHeading">Sign the pledge</h2>
+        <h2 class="text-4xl font-bold text-primary mb-4" id="signPledgeHeading">Sign the pledge</h2>
+        <p class="text-lg text-secondary mb-8 visual-cue" id="principlesText">Join us in upholding these guiding
+          principles to create a more inclusive and empathetic tech industry.</p>
         <form id="signForm" action="sign.php" method="post" class="space-y-4" aria-label="Pledge Form">
           <label id="signFormTitle" class="sr-only">Sign the pledge form</label>
           <label for="fullNameInput" class="block text-primary" id="fullNameLabel">Full name</label>
@@ -552,7 +558,7 @@
                 $signatures = json_decode(file_get_contents('signatures.json'), true);
                 foreach ($signatures as $signature) {
                     $timestamp = date('c', $signature['timestamp']);
-                    echo "<div class='signature'><span class='timestamp'>$timestamp</span><span class='role'>{$signature['role']}</span><span class='company'>{$signature['company']}</span><span class='location'>{$signature['city']}, {$signature['country']}</span><span class='full_name'>- {$signature['full_name']}</span></div>";
+                    echo "<div class='signature'><span class='timestamp'>$timestamp</span><span class='role'>{$signature['role']},&nbsp;</span><span class='company'>{$signature['company']}</span><span class='location'>{$signature['city']}, {$signature['country']}</span><span class='full_name'>{$signature['full_name']}</span></div>";
                 }
             }
             ?>
@@ -561,7 +567,7 @@
       </section>
 
       <section class="merchandise-section" aria-label="Merchandise">
-        <h2 class="text-3xl font-bold mb-4 text-primary" id="supportHeading">Support our cause</h2>
+        <h2 class="text-4xl font-bold mb-4 text-primary" id="supportHeading">Support our cause</h2>
         <p class="text-lg text-secondary mb-8" id="supportText">All proceeds from the sales of these t-shirts will go to
           compensate people with disabilities participating in user research studies. Your purchase makes a difference!
         </p>
