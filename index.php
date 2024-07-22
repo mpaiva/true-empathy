@@ -268,20 +268,10 @@
     /* Light color for role and company in dark mode */
   }
 
-  .form-input {
-    width: calc(100% - 2rem);
-    /* Reduce width */
-    margin: 0 auto;
-    /* Center input */
-    padding: 10px;
-    /* More padding for better readability */
-    font-size: 1rem;
-    /* Increase font size */
-    border: 2px solid #333333;
-    /* Ensure visible border */
-  }
 
-  .form-input:focus {
+  input:focus,
+  select:focus,
+  button[type='submit']:focus {
     outline: 4px solid #FF00FF;
     /* Magenta border color */
     outline-offset: 2px;
@@ -546,8 +536,7 @@
           <input type="text" name="honeypot" class="honeypot" aria-hidden="true"
             aria-label="If you are human, leave this field blank" autocomplete="off" tabindex="-1" />
 
-          <button type="submit" id="signButton"
-            class="button-primary w-full p-3 rounded hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-blue-300"
+          <button type="submit" id="signButton" class="button-primary w-full p-3 rounded hover:opacity-90"
             aria-label="Sign the pledge">Sign the pledge</button>
         </form>
         <div class="signatures mt-10 guest-book" role="region" aria-label="Signing Sheet">
