@@ -52,7 +52,6 @@ $signatures[] = [
     'timestamp' => time()
 ];
 
-// Save signatures
 file_put_contents('signatures.json', json_encode($signatures));
 
 $_SESSION['success'] = true;
