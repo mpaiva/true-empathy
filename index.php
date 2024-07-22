@@ -455,7 +455,7 @@
 <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
   <div class="container mx-auto p-6 rounded-lg shadow-lg">
     <header class="text-center mb-10">
-      <h1 class="text-8xl mb-20 font-bold text-primary" id="pageTitle">The True Empathy Pledge</h1>
+      <h1 class="text-8xl mb-20 font-bold text-primary m:text-6xl" id="pageTitle">The True Empathy Pledge</h1>
       <p class="text-lg text-secondary mt-4 visual-cue" id="commitmentText">
         Join the community committed to fostering an inclusive tech industry by adhering four simple principles.
       </p>
