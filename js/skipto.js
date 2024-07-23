@@ -95,7 +95,7 @@
       landmarks:
         'main, [role="main"], [role="search"], nav, [role="navigation"], aside, [role="complementary"]',
       headings:
-        'main h1, [role="main"] h1, main h2, [role="main"] h2, main h3, [role="main"] h3',
+        'header h1, main h1, [role="main"] h1, main h2, [role="main"] h2, main h3, [role="main"] h3',
 
       // Custom CSS position and colors
       colorTheme: "",

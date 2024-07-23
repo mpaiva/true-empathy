@@ -21,8 +21,8 @@ if (!$full_name || !$email || !$role) {
 
 // Load existing signatures
 $signatures = [];
-if (file_exists('signatures.json')) {
-    $signatures = json_decode(file_get_contents('signatures.json'), true);
+if (file_exists('/signatures/signatures.json')) {
+    $signatures = json_decode(file_get_contents('/signatures/signatures.json'), true);
 }
 
 // Check for duplicates
@@ -52,7 +52,7 @@ $signatures[] = [
     'timestamp' => time()
 ];
 
-file_put_contents('signatures.json', json_encode($signatures));
+file_put_contents('/signatures/signatures.json', json_encode($signatures));
 
 $_SESSION['success'] = true;
 header('Location: index.php');

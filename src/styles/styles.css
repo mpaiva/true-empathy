@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your existing custom styles */
+body {
+  font-size: 1.125rem;
+  /* Base body text size */
+}
+
+header,
+main,
+footer {
+  margin: 4rem auto;
+  max-width: 600px;
+  /* Space between header and main content */
+}
+
+section {
+  margin: 2rem 0;
+}
+
+#signForm input {
+  color: #333333;
+}
+
+.required::after {
+  content: " *";
+  color: red;
+}
+
+.merchandise-section {
+  display: none;
+}
+
+.mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #333;
+  border-radius: 8px;
+  border: 4px solid yellow;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+.dark .container {
+  background-color: #1a202c;
+  color: #f7fafc;
+}
+
+.text-primary {
+  color: #333333;
+}
+
+.dark .text-primary {
+  color: #f7fafc;
+}
+
+.bg-secondary {
+  background-color: #f4f4f4;
+}
+
+.dark .bg-secondary {
+  background-color: #2d3748;
+}
+
+.text-secondary {
+  color: #555555;
+}
+
+.dark .text-secondary {
+  color: #e2e8f0;
+}
+
+.button-primary {
+  background-color: #0056b3;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.dark .button-primary {
+  background-color: #2c5282;
+  color: #ffffff;
+}
+
+.button-primary:hover {
+  background-color: #004494;
+}
+
+.dark .button-primary:hover {
+  background-color: #2a4365;
+}
+
+#languageSelectSection {
+  margin: 4rem auto;
+}
+
+#rotatingLabel {
+  display: inline-block;
+  width: 240px;
+  line-height: 46px;
+  font-size: 1.5rem;
+  /* background-color: #ffe3ff; */
+  transition: opacity 1s ease-in-out;
+}
+
+#languageSelect {
+  background-color: white;
+  border: 2px solid #666;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  margin: 0;
+  box-sizing: border-box;
+  appearance: none;
+}
+
+#languageSelect {
+  background-image: linear-gradient(45deg, transparent 50%, blue 50%),
+    linear-gradient(135deg, blue 50%, transparent 50%),
+    linear-gradient(to right, #ffaaff, #ffaaff);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), 100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+#languageSelect:focus {
+  background-image: linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, white 50%),
+    linear-gradient(to right, gray, gray);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, 100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+.dark #languageSelect {
+  color: #000;
+}
+
+.guest-book {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.dark .guest-book {
+  background-color: #2d3748;
+}
+
+.signature {
+  padding: 20px 10px 0px 10px;
+  border-bottom: 4px dotted #ffaaff;
+  margin-bottom: 10px;
+}
+
+.dark .signature {
+  border-bottom-color: rgba(59, 130, 246, 0.5);
+}
+
+.signature:last-child {
+  border-bottom: inherit;
+}
+
+.signature .full_name {
+  font-family: "Gwendolyn", cursive;
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  line-height: auto;
+  margin-top: 2rem;
+}
+
+.dark .signature .full_name {
+  color: #a5b4fc;
+}
+
+.signature .role,
+.signature .company,
+.signature .timestamp,
+.signature .location {
+  color: #333333;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.signature .role,
+.signature .company {
+  display: inline;
+}
+
+.signature .company {
+  margin-left: 0;
+}
+
+.dark .signature .role,
+.dark .signature .company,
+.dark .signature .timestamp,
+.dark .signature .location {
+  color: #cbd5e0;
+}
+
+input:focus,
+select:focus,
+button[type="submit"]:focus {
+  outline: 4px solid #ff00ff;
+  outline-offset: 2px;
+}
+
+.honeypot {
+  display: none;
+}
+
+.footer-links {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+.footer-links a {
+  color: #0056b3;
+  margin: 0 10px;
+}
+
+.dark .footer-links a {
+  color: #2c5282;
+}
+
+.visual-cue {
+  border-left: 4px solid #ffaaff;
+  padding-left: 1rem;
+  max-width: 80ch;
+  text-align: left;
+}
+
+.dark .visual-cue {
+  border-left-color: #2c5282;
+}
+
+p {
+  text-align: left;
+}
+
+.error {
+  border: 2px solid red;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.section-spacing {
+  margin-top: 2rem;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
