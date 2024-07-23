@@ -1181,6 +1181,11 @@ button[type="submit"]:focus {
   outline-offset: 2px;
 }
 
+#signButton {
+  font-weight: 800;
+  font-size: 120%;
+}
+
 .honeypot {
   display: none;
 }
