@@ -21,7 +21,7 @@ ini_set('display_errors', 1);
   <script type="text/javascript" src="js/skipto.js"></script>
 </head>
 
-<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+<body class="bg-gray-900 text-gray-100 dark:bg-gray-800 dark:text-gray-100">
   <div class="container p-6 rounded-lg shadow-lg">
     <?php include 'partials/header.php'; ?>
     <main>
