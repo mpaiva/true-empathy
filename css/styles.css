@@ -1181,6 +1181,43 @@ button[type="submit"]:focus {
   outline-offset: 2px;
 }
 
+/* Increase the contrast of input placeholders */
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #555555;
+  /* Change this to a high-contrast color of your choice */
+  opacity: 1;
+  /* Ensures the color is fully opaque */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #555555;
+  /* Change this to a high-contrast color of your choice */
+  opacity: 1;
+  /* Ensures the color is fully opaque */
+}
+
+/* Apply the same style for different states if needed */
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: #555555;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: #555555;
+}
+
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+  color: #555555;
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+  color: #555555;
+}
+
 #signButton {
   font-weight: 600;
   font-size: 140%;
