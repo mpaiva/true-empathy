@@ -1,5 +1,6 @@
 function toggleMode() {
   const htmlElement = document.documentElement;
+  htmlElement.classList.add("transition-colors", "duration-1000");
   if (htmlElement.classList.contains("dark")) {
     htmlElement.classList.remove("dark");
     localStorage.setItem("theme", "light");
@@ -21,3 +22,6 @@ function setInitialMode() {
     document.documentElement.classList.remove("dark");
   }
 }
+
+// Ensure the initial mode is set on page load
+document.addEventListener("DOMContentLoaded", setInitialMode);

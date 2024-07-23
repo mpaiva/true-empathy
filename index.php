@@ -21,8 +21,9 @@ ini_set('display_errors', 1);
   <script type="text/javascript" src="js/skipto.js"></script>
 </head>
 
-<body class="bg-gray-900 text-gray-100 dark:bg-gray-800 dark:text-gray-100">
-  <div class="container p-6 rounded-lg shadow-lg">
+<body class="transition-colors duration-2000 bg-gray-900 text-gray-100 dark:bg-gray-800 dark:text-gray-100">
+  <div
+    class="container p-6 rounded-lg shadow-lg  transition-colors duration-2000 bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200"">
     <?php include 'partials/header.php'; ?>
     <main>
       <?php include 'partials/principles.php'; ?>
@@ -31,7 +32,8 @@ ini_set('display_errors', 1);
       <?php include 'partials/merchandise.php'; ?>
     </main>
     <?php include 'partials/footer.php'; ?>
-    <script type="text/javascript" src="js/init.js"></script>
+    <script type=" text/javascript" src="js/init.js">
+    </script>
 
   </div>
 </body>
