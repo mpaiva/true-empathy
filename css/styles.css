@@ -1184,6 +1184,7 @@ button[type="submit"]:focus {
 #signButton {
   font-weight: 600;
   font-size: 140%;
+  margin-top: 80px;
 }
 
 .dark #getLocationButton {
