@@ -231,8 +231,7 @@ button[type="submit"]:focus {
   font-size: 120%;
 }
 
-.dark #signButton {
-  background-color: #2c5282;
+.dark #getLocationButton {
   color: #36daff;
 }
 
