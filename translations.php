@@ -183,7 +183,7 @@ $translations = [
 'city_placeholder' => 'Enter your city',
 'country' => 'Country',
 'country_placeholder' => 'Enter your country',
-'get_location' => 'Get My Location',
+'get_location' => 'Include my location',
 'getting_location' => 'Getting your location...'
 ],
 'es' => [

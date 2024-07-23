@@ -2,7 +2,7 @@
 const translations = {
   en: {
     gettingLocation: "Getting your location...",
-    getLocation: "Get My Location",
+    getLocation: "Include my location",
   },
   ar: {
     gettingLocation: "جارٍ الحصول على موقعك...",
