@@ -25,6 +25,13 @@
     <input type="text" id="companyInput" name="company" placeholder="Enter your company (optional)"
       class="w-full p-3 border border-gray-800 rounded" aria-labelledby="companyLabel" />
 
+    <hr />
+
+    <!-- Button to get location -->
+    <button type="button" id="getLocationButton"
+      class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-white dark:hover:bg-blue-500">Get
+      My Location</button>
+
     <label for="cityInput" class="block text-primary" id="cityLabel">City</label>
     <input type="text" id="cityInput" name="city" placeholder="Enter your city"
       class="w-full p-3 border border-gray-800 rounded" aria-labelledby="cityLabel" />
@@ -33,9 +40,7 @@
     <input type="text" id="countryInput" name="country" placeholder="Enter your country"
       class="w-full p-3 border border-gray-800 rounded" aria-labelledby="countryLabel" />
 
-    <!-- Button to get location -->
-    <button type="button" id="getLocationButton" class="button-secondary w-full p-3 rounded hover:opacity-90">Get My
-      Location</button>
+
 
     <!-- Honeypot field -->
     <input type="text" name="honeypot" class="honeypot" aria-hidden="true"

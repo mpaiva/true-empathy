@@ -7,22 +7,29 @@ if (!empty($_POST['honeypot'])) {
     exit;
 }
 
-$full_name = trim($_POST['full_name']);
+// Collect form data
+$first_name = trim($_POST['first_name']);
+$last_name = trim($_POST['last_name']);
+$full_name = $first_name . ' ' . $last_name;
 $email = trim($_POST['email']);
 $role = trim($_POST['role']);
 $company = trim($_POST['company']);
 $city = trim($_POST['city']);
 $country = trim($_POST['country']);
 
-if (!$full_name || !$email || !$role) {
+// Basic validation
+if (!$first_name || !$last_name || !$email || !$role) {
     header('Location: index.php?error=missing_data');
     exit;
 }
 
+// Path to the signatures file
+$signatures_file = 'signatures/signatures.json';
+
 // Load existing signatures
 $signatures = [];
-if (file_exists('/signatures/signatures.json')) {
-    $signatures = json_decode(file_get_contents('/signatures/signatures.json'), true);
+if (file_exists($signatures_file)) {
+    $signatures = json_decode(file_get_contents($signatures_file), true);
 }
 
 // Check for duplicates
@@ -52,8 +59,13 @@ $signatures[] = [
     'timestamp' => time()
 ];
 
-file_put_contents('/signatures/signatures.json', json_encode($signatures));
+// Save signatures
+if (file_put_contents($signatures_file, json_encode($signatures))) {
+    $_SESSION['success'] = true;
+} else {
+    $_SESSION['error'] = 'Unable to save your signature. Please try again later.';
+}
 
-$_SESSION['success'] = true;
 header('Location: index.php');
+exit;
 ?>
