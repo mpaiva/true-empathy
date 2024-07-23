@@ -261,7 +261,8 @@ section {
 
 input:focus,
 select:focus,
-button[type="submit"]:focus {
+button[type="submit"]:focus,
+button#getLocationButton:focus {
   outline: 4px solid #ff00ff;
   outline-offset: 2px;
 }
