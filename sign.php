@@ -49,6 +49,7 @@ if ($already_signed) {
 }
 
 // Add new signature
+date_default_timezone_set('UTC');
 $signatures[] = [
     'full_name' => $full_name,
     'email' => $email,
@@ -56,7 +57,7 @@ $signatures[] = [
     'company' => $company,
     'city' => $city,
     'country' => $country,
-    'timestamp' => time()
+    'timestamp' => (new DateTime())->format(DateTime::ATOM) // Store timestamp in ATOM format
 ];
 
 // Save signatures
