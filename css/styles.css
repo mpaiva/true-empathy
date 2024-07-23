@@ -991,6 +991,7 @@ section {
 
 .mode-toggle {
   position: fixed;
+  color: #ffffff;
   top: 20px;
   right: 20px;
   padding: 10px;
