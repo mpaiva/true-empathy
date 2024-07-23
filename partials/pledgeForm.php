@@ -34,7 +34,7 @@
 
     <label for="cityInput" class="block text-primary" id="cityLabel">City</label>
     <input type="text" id="cityInput" name="city" placeholder="Enter your city"
-      class="w-full p-3 border border-gray-800 rounded" aria-labelledby="cityLabel" />
+      class="w-full p-3  border border-gray-800 rounded" aria-labelledby="cityLabel" />
 
     <label for="countryInput" class="block text-primary" id="countryLabel">Country</label>
     <input type="text" id="countryInput" name="country" placeholder="Enter your country"
@@ -47,6 +47,6 @@
       aria-label="If you are human, leave this field blank" autocomplete="off" tabindex="-1" />
 
     <button type="submit" id="signButton" class="button-primary w-full p-3 rounded hover:opacity-90"
-      aria-label="Sign the pledge">Sign the pledge</button>
+      aria-label="Sign the pledge"><strong>Sign the pledge</strong></button>
   </form>
 </section>
