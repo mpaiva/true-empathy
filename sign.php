@@ -7,18 +7,18 @@ if (!empty($_POST['honeypot'])) {
     exit;
 }
 
-// Collect form data
-$first_name = trim($_POST['first_name']);
-$last_name = trim($_POST['last_name']);
+// Sanitize and validate form data
+$first_name = htmlspecialchars(trim($_POST['first_name']), ENT_QUOTES, 'UTF-8');
+$last_name = htmlspecialchars(trim($_POST['last_name']), ENT_QUOTES, 'UTF-8');
 $full_name = $first_name . ' ' . $last_name;
-$email = trim($_POST['email']);
-$role = trim($_POST['role']);
-$company = trim($_POST['company']);
-$city = trim($_POST['city']);
-$country = trim($_POST['country']);
+$email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+$role = htmlspecialchars(trim($_POST['role']), ENT_QUOTES, 'UTF-8');
+$company = htmlspecialchars(trim($_POST['company']), ENT_QUOTES, 'UTF-8');
+$city = htmlspecialchars(trim($_POST['city']), ENT_QUOTES, 'UTF-8');
+$country = htmlspecialchars(trim($_POST['country']), ENT_QUOTES, 'UTF-8');
 
 // Basic validation
-if (!$first_name || !$last_name || !$email || !$role) {
+if (!$first_name || !$last_name || !$email || !$role || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     header('Location: index.php?error=missing_data');
     exit;
 }
@@ -61,7 +61,7 @@ $signatures[] = [
 ];
 
 // Save signatures
-if (file_put_contents($signatures_file, json_encode($signatures))) {
+if (file_put_contents($signatures_file, json_encode($signatures, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT))) {
     $_SESSION['success'] = true;
 } else {
     $_SESSION['error'] = 'Unable to save your signature. Please try again later.';
