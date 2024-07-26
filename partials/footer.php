@@ -1,7 +1,7 @@
     <footer class="footer-links">
       <!-- <a href="#" id="footerAccessibilityStatement">Accessibility Statement</a>
       <a href="#" id="footerTermsOfUse">Terms of Use</a> -->
-      TrueEmpathy.com - Creative Commons License
+      True-Empathy.com - Creative Commons License
     </footer>
 
 
