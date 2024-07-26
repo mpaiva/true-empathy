@@ -990,12 +990,14 @@ video {
   --bg-color-dark: #1a202c;
   --text-color-light: #000000;
   --text-color-dark: #ffffff;
+  --transition-time-theme: 0.3s;
 }
 
 html {
   background-color: var(--bg-color-light);
   color: var(--text-color-light);
-  transition: background-color 1s, color 1s;
+  transition: background-color var(--transition-time-theme),
+    color var(--transition-time-theme);
 }
 
 html.dark {
@@ -1008,7 +1010,8 @@ html.dark {
 html,
 body,
 .container {
-  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  transition: background-color var(--transition-time-theme) ease-in-out,
+    color var(--transition-time-theme) ease-in-out;
 }
 
 /* Ensure the transition classes are applied to the container */
@@ -1018,14 +1021,16 @@ body,
   margin: 0 auto;
   background-color: #ffffff;
   color: #333333;
-  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  transition: background-color var(--transition-time-theme) ease-in-out,
+    color var(--transition-time-theme) ease-in-out;
   /* Add transition properties */
 }
 
 .dark .container {
   background-color: #1a202c;
   color: #f7fafc;
-  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  transition: background-color var(--transition-time-theme) ease-in-out,
+    color var(--transition-time-theme) ease-in-out;
   /* Add transition properties */
 }
 
@@ -1142,7 +1147,7 @@ section {
   line-height: 46px;
   font-size: 1.5rem;
   /* background-color: #ffe3ff; */
-  transition: opacity 1s ease-in-out;
+  transition: opacity var(--transition-time-theme) ease-in-out;
 }
 
 #languageSelect {
