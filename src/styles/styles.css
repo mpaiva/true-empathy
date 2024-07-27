@@ -8,7 +8,28 @@
   --text-color-light: #000000;
   --text-color-dark: #ffffff;
   --transition-time-theme: 0.3s;
-}
+  --focus-ring-color: {#f0f};
+  --background-color: #fff;
+  
+  --skipToButtonBackgroundColor: #ddd;
+  --skipToMenuTextColor: #000;
+  --skipToFocusBorderColor: #000;
+  --skipToMenuBackgroundColor: #f6f6f6;
+  --skipToMenuitemFocusBackgroundColor: #00f;
+  --skipToMenuitemFocusTextColor: #fff;
+  }
+  
+  /* Set global focus styles */
+  :focus {
+    outline-color: transparent; /* Change outline color to transparent so it's invisible but still appears in Windows High Contrast Mode */
+    outline-style: solid; /* Necessary to hide the default outline style in Edge since it has 2 tones. */
+    box-shadow: 0 0 0 2px var(--background-color),
+      0 0 0 6px var(--focus-ring-color);
+    z-index: 2000;
+  }
+
+
+
 
 html {
   background-color: var(--bg-color-light);
